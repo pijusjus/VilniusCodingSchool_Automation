@@ -7,7 +7,7 @@ using NUnit.Framework;
 
 namespace Tests
 {
-    public class Class1
+    public class HomeworkTests
     {
         [Test]
         public void Division993()
