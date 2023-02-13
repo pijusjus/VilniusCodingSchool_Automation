@@ -10,7 +10,7 @@ namespace Tests
     public class Class1
     {
         [Test]
-        public void Division993Test()
+        public void Division993()
         {
             int expectedResult = 0;
 
@@ -20,43 +20,33 @@ namespace Tests
         }
 
         [Test]
-        public void WendesdayTest()
+        public void Wendesday()
         {
+            DayOfWeek expectedResult = DayOfWeek.Wednesday;
 
-            var currentTime = DateTime.Now;
+            DateTime now = DateTime.Now;
+            DayOfWeek actualResult = DateTime.Now.DayOfWeek;
 
-            if (currentTime.DayOfWeek == DayOfWeek.Wednesday)
-            {
-                Assert.IsTrue(true);
-            }
-            else
-            {
-                Assert.IsTrue(false);
-            }
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test]
-        public void ThirteenthHourTest()
+        public void ThirteenthHour()
         {
-            var currentTime = DateTime.Now;
+            string expectedResult = "13:00";
 
+            string actualResult = $"{DateTime.Now.Hour}:{DateTime.Now.Minute}";
+            string actualResultFormatted = DateTime.Now.ToString("HH:mm");
 
-            if (currentTime.Hour == 13)
-            {
-                Assert.IsTrue(true);
-            }
-            else
-            {
-                Assert.IsTrue(false);
-            }
+            Assert.AreEqual(expectedResult, actualResultFormatted);
         }
 
         [Test]
-        public void EqualNumbersTest()
+        public void EqualNumbers()
         {
             int count = 0;
 
-            for (int i = 1; i < 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 if (i % 2 == 0)
                 {
